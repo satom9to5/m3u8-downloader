@@ -1,0 +1,3 @@
+type DownloadableSite = {
+  downloadable: boolean 
+}

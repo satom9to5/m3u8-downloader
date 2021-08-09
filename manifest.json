@@ -1,0 +1,53 @@
+{
+  "applications": {
+    "gecko": {
+      "id": "m3u8-downloader@example.org"
+    }
+  },
+  "background": {
+    "scripts": [
+      "dist/backgrounds.js"
+    ]
+  },
+  "browser_action": {
+    "default_title": "m3u8-downloader",
+    "default_popup": "static/popup.html"
+  },
+  "content_scripts": [{
+    "js": [
+      "dist/contents.js"
+    ],
+    "matches": ["<all_urls>"],
+    "all_frames": false,
+    "match_about_blank": true
+  }],
+  "description": "use m3u8 detect and download.",
+  "icons": {
+    "128": "static/images/downloadable_icon-128x128.png",
+    "16": "static/images/downloadable_icon-16x16.png",
+    "24": "static/images/downloadable_icon-24x24.png",
+    "32": "static/images/downloadable_icon-32x32.png",
+    "48": "static/images/downloadable_icon-48x48.png",
+    "64": "static/images/downloadable_icon-64x64.png"
+  },
+  "manifest_version": 2,
+  "name": "m3u8 downloader",
+  "options_ui": {
+    "page": "static/preference.html",
+    "open_in_tab": true
+  },
+  "permissions": [
+    "activeTab",
+    "contextMenus",
+    "debugger",
+    "downloads",
+    "nativeMessaging",
+    "notifications",
+    "storage",
+    "tabs",
+    "webRequest",
+    "webRequestBlocking",
+    "<all_urls>"
+  ],
+  "version": "1.0"
+}

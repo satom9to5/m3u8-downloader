@@ -1,0 +1,29 @@
+{
+  "name": "extension",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {
+    "@types/chrome": "^0.0.134",
+    "css-loader": "^5.2.0",
+    "devtools-protocol": "^0.0.869921",
+    "jest": "^26.6.3",
+    "style-loader": "^2.0.0",
+    "ts-loader": "^8.1.0",
+    "typescript": "^4.2.3",
+    "vue-loader": "^15.9.6",
+    "vue-template-compiler": "^2.6.12",
+    "webpack": "^5.30.0",
+    "webpack-cli": "^4.6.0"
+  },
+  "scripts": {
+    "build": "node node_modules/webpack/bin/webpack.js --mode development",
+    "watch": "node node_modules/webpack/bin/webpack.js --watch --progress --mode development"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "parse-hls": "^1.0.7",
+    "vue": "^2.6.12"
+  }
+}

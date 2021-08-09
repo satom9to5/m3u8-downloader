@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  extension:
+    build:
+      context: .
+    image: satom9to5/m3u8-downloader
+    volumes:
+      - .:/extension
+      - /home/vagrant/node_modules/m3u8-downloader:/extension/node_modules
+    tty: true
